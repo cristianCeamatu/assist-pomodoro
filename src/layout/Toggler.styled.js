@@ -13,12 +13,12 @@ export const Wrapper = styled.div`
   p {
     &:first-child {
       color: ${(props) =>
-        props.theme.mode === 'light' ? '#4F4F4F' : '#828282'};
+        props.theme.themes[props.theme.mode].togglerColorLight};
     }
 
     &:last-child {
       color: ${(props) =>
-        props.theme.mode === 'light' ? '#BDBDBD' : '#F2F2F2'};
+        props.theme.themes[props.theme.mode].togglerColorDark};
     }
   }
 

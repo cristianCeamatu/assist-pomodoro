@@ -4,8 +4,12 @@ export const Nav = styled.nav`
   padding: 24px 20px;
   line-height: 16px;
   font-style: normal;
-  background: ${(props) =>
-    props.theme.mode === 'light' ? '#ffffff' : '#252736'};
+  ${({ theme }) => {
+    const { mode, themes } = theme;
+    return `
+          background: ${themes[mode].navBg};
+        `;
+  }};
 
   .container {
     display: flex;
@@ -25,14 +29,15 @@ export const Nav = styled.nav`
   }
 
   ul li a {
-    background: ${(props) =>
-      props.theme.mode === 'light' ? '#11bcc7' : '#252736'};
-    box-shadow: ${(props) =>
-      props.theme.mode === 'light'
-        ? '0px 4px 8px rgba(17, 188, 199, 0.15)'
-        : ''};
-    border: ${(props) =>
-      props.theme.mode === 'light' ? '' : '1px solid #ffffff'};
+    ${({ theme }) => {
+      const { mode, themes } = theme;
+      return `
+          background: ${themes[mode].navButtonBg};
+          box-shadow: ${themes[mode].navButtonShadow};
+          border: ${themes[mode].navButtonBorder};
+        `;
+    }};
+
     color: #fff;
     box-sizing: border-box;
     border-radius: 4px;

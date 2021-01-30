@@ -6,8 +6,7 @@ export const Wrapper = styled.div`
   border: 0.5px solid #828282;
   box-sizing: border-box;
   border-radius: 10px;
-  background: ${(props) =>
-    props.theme.mode === 'light' ? '#fcfcfc' : '#252836'};
+  background: ${({ theme }) => theme.themes[theme.mode]};
 
   article {
     padding: 24px 10px;
@@ -38,15 +37,14 @@ export const Wrapper = styled.div`
         font-size: 20px;
         line-height: 30px;
         margin-bottom: 8px;
-        color: ${(props) => (props.theme.mode === 'light' ? '' : '#f2f2f2')};
+        color: ${({ theme }) => theme.themes[theme.mode].aboutTitle};
       }
 
       p,
       li {
         font-size: 16px;
         line-height: 18px;
-        color: ${(props) =>
-          props.theme.mode === 'light' ? '#4f4f4f' : '#E0E0E0'};
+        color: ${({ theme }) => theme.themes[theme.mode].aboutSubtitle};
       }
 
       li {

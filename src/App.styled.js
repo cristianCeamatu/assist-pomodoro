@@ -10,10 +10,13 @@ export const Wrapper = styled.div`
     margin: 0 auto;
 
     @media only screen and (min-width: 992px) {
-      background: ${(props) =>
-        props.theme.mode === 'light' ? '#fff' : '#1F1D2B'};
-      border: ${(props) =>
-        props.theme.mode === 'light' ? '0' : '1px solid #828282'};
+      ${({ theme }) => {
+        const { mode, themes } = theme;
+        return `
+          background: ${themes[mode].bg};
+          border: ${themes[mode].border};
+        `;
+      }};
       box-shadow: 0px 10px 34px rgba(50, 70, 91, 0.15);
       border-radius: 4px;
       margin: 35px auto;
