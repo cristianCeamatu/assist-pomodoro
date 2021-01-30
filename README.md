@@ -9,6 +9,10 @@
 
 To get a local copy up and running follow these simple example steps.
 
+### Live demo
+
+[Netlify deploy](https://assist-software-pomodoro.netlify.app/)
+
 ### Setup
 
 Clone the project locally.
