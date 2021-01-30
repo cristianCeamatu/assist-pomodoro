@@ -4,6 +4,11 @@ export const H3 = styled.h3`
   font-size: 24px;
   line-height: 26px;
   margin-bottom: 24px;
+
+  @media screen and (min-width: 992px) {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
 `;
 
 export const DisplayContainer = styled.div`
@@ -18,6 +23,10 @@ export const DisplayContainer = styled.div`
   line-height: 64px;
   background: ${(props) =>
     props.theme.mode === 'light' ? '#FCFCFC' : '#252836'};
+  @media screen and (min-width: 992px) {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 4;
+  }
 `;
 
 export const SettingsContainer = styled.div`
@@ -57,6 +66,11 @@ export const SettingsContainer = styled.div`
         color: #11bcc7;
       }
     }
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
   }
 `;
 
@@ -103,5 +117,10 @@ export const ButtonsContainer = styled.div`
       color: ${(props) =>
         props.theme.mode === 'light' ? '#828282' : '#F2F2F2'};
     }
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
   }
 `;

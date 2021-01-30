@@ -16,7 +16,7 @@ const App = () => {
       <GlobalStyle />
       <Wrapper>
         <Navbar />
-        <main>
+        <main className="grid">
           <Toggler />
           <Content />
         </main>

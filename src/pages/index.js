@@ -4,11 +4,11 @@ import Pomodoro from './Pomodoro';
 import About from './About';
 
 const Content = () => (
-  <main>
+  <div>
     <Switch>
       <Route exact path="/about" component={About} />
       <Route path="/" component={Pomodoro} />
     </Switch>
-  </main>
+  </div>
 );
 export default Content;

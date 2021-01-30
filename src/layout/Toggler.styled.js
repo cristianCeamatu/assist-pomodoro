@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   padding: 16px 20px;
   font-size: 12px;
   line-height: 22px;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -53,5 +52,10 @@ export const Wrapper = styled.div`
 
   #autoplay.checkbox {
     display: none;
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
   }
 `;
