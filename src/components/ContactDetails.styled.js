@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  margin: 0 20px 56px;
+  margin: 0 auto 56px;
+  max-width: 335px;
+  padding-bottom: 100px;
   border: 0.5px solid #828282;
   box-sizing: border-box;
   border-radius: 10px;
@@ -9,9 +11,9 @@ export const Wrapper = styled.div`
     props.theme.mode === 'light' ? '#fcfcfc' : '#252836'};
 
   article {
-    padding: 24px 36px;
+    padding: 24px 10px;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     font-size: 20px;
     line-height: 30px;
@@ -23,7 +25,6 @@ export const Wrapper = styled.div`
     .icon {
       flex-basis: 25%;
       text-align: right;
-      align-self: start;
       padding-right: 11px;
       font-size: 22px;
       line-height: 36px;
@@ -32,6 +33,7 @@ export const Wrapper = styled.div`
     .details {
       flex-basis: 75%;
       text-align: left;
+      padding-right: 36px;
 
       h3 {
         font-size: 20px;
@@ -58,6 +60,41 @@ export const Wrapper = styled.div`
           border-radius: 100%;
           margin-right: 8px;
           margin-bottom: 2px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    border: 0;
+    gap: 30px;
+    margin: 8px auto 100px;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    background: inherit;
+
+    article {
+      width: 326px;
+      border: 1px solid #bdbdbd;
+      box-sizing: border-box;
+      border-radius: 8px;
+
+      .icon {
+        line-height: 42px;
+      }
+
+      .details {
+        h3 {
+          font-size: 26px;
+          line-height: 36px;
+        }
+
+        p,
+        li {
+          font-size: 20px;
+          line-height: 22px;
         }
       }
     }
