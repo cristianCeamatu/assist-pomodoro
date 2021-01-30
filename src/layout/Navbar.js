@@ -5,15 +5,16 @@ import { Nav } from './Navbar.styled';
 const Navbar = () => {
   return (
     <Nav>
-      <div className="nav-brand">
-        <Link to="/">Pomotime</Link>
+      <div className="container">
+        <div className="nav-brand">
+          <Link to="/">Pomotime</Link>
+        </div>
+        <ul>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
       </div>
-
-      <ul>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
     </Nav>
   );
 };

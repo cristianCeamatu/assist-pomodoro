@@ -4,7 +4,7 @@ import { intToMMSS } from '../../utils/format';
 
 const initialState = {
   breakLength: 5,
-  sessionLength: 5,
+  sessionLength: 25,
   active: false,
   timer: false,
   timeLeft: 1500,
