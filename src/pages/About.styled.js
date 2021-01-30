@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     font-size: 24px;
     line-height: 34px;
     margin: 26px auto 32px;
-    color: ${(props) => (props.theme.mode === 'light' ? '' : '#fff')};
+    color: ${({ theme }) => theme.themes[theme.mode].aboutHeading};
   }
 
   @media screen and (min-width: 992px) {
