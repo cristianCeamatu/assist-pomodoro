@@ -165,7 +165,6 @@ export const ButtonsContainer = styled.div`
       font-size: 28px;
       line-height: 30px;
       max-width: 100%;
-      border: 5px solid red;
     }
   }
 
