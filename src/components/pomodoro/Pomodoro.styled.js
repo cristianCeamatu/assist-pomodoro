@@ -24,8 +24,7 @@ export const DisplayContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${(props) =>
-    props.theme.mode === 'light' ? '#FCFCFC' : '#252836'};
+  background: ${({ theme }) => theme.themes[theme.mode].displayBg};
   position: relative;
   width: 297px;
   height: 297px;
@@ -72,7 +71,7 @@ export const SettingsContainer = styled.div`
   h3 {
     margin-bottom: 8px;
     line-height: 24px;
-    color: ${(props) => (props.theme.mode === 'light' ? '#4F4F4F' : '')};
+    color: ${({ theme }) => theme.themes[theme.mode].settingsTitle};
   }
 
   ul {
@@ -142,29 +141,16 @@ export const ButtonsContainer = styled.div`
     height: 62px;
 
     &.gradient {
-      background: ${(props) =>
-        props.theme.mode === 'light'
-          ? 'linear-gradient(91.84deg, #2F80ED 0.5%, rgba(238, 58, 220, 0.6) 89.88%)'
-          : 'linear-gradient(91.84deg, #11BCC7 0.5%, rgba(238, 58, 220, 0.6) 89.88%)'};
-      box-shadow: ${(props) =>
-        props.theme.mode === 'light'
-          ? '0px 4px 24px rgba(93, 11, 131, 0.25)'
-          : '0px 4px 40px rgba(93, 11, 131, 0.25)'};
+      background: ${({ theme }) => theme.themes[theme.mode].gradiendButtonBg};
+      box-shadow: ${({ theme }) =>
+        theme.themes[theme.mode].gradiendButtonShadow};
     }
 
     &.default {
-      background: ${(props) =>
-        props.theme.mode === 'light' ? '#FCFCFC' : '#252836'};
-      border: ${(props) =>
-        props.theme.mode === 'light'
-          ? '2px solid #828282'
-          : '2px solid #E0E0E0'};
-      filter: ${(props) =>
-        props.theme.mode === 'light'
-          ? 'drop-shadow(0px 4px 24px rgba(47, 128, 237, 0.25))'
-          : ''};
-      color: ${(props) =>
-        props.theme.mode === 'light' ? '#828282' : '#F2F2F2'};
+      background: ${({ theme }) => theme.themes[theme.mode].defaultButtonBg};
+      border: ${({ theme }) => theme.themes[theme.mode].defaultButtonBorder};
+      filter: ${({ theme }) => theme.themes[theme.mode].buttonFilter};
+      color: ${({ theme }) => theme.themes[theme.mode].defaultButtonColor};
     }
   }
 
