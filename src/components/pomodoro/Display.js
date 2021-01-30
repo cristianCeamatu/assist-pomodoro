@@ -16,8 +16,7 @@ const Display = () => {
   useEffect(() => {
     const totalTimePerTurn =
       timeLeftType === 'Session' ? sessionLength * 60 : breakLength * 60;
-    console.log('totalTimePerTurn', totalTimePerTurn);
-    if (totalTimePerTurn % (totalTimePerTurn / 4) === 0)
+    if (totalTimePerTurn % (totalTimePerTurn / 100) === 0)
       setStrokeOffset((prevState) => (prevState += 0.5));
   }, [timeLeft, breakLength, sessionLength, timeLeftType]);
 
@@ -29,22 +28,21 @@ const Display = () => {
           r="45"
           cx="50%"
           cy="50%"
-          stroke="#FCFCFC"
           fill="none"
-          strokeWidth="200"
+          strokeWidth="10"
           strokeLinecap="round"
           strokeDasharray="0, 0"
         />
         <circle
           id="success-value"
-          r="45"
+          r="42"
           cx="50%"
           cy="50%"
           stroke="rgba(109, 215, 185, 0.65)"
           fill="none"
-          strokeWidth="3"
+          strokeWidth="2"
           strokeLinecap="round"
-          strokeDasharray={`209, ${strokeOffset}`}
+          strokeDasharray={`194, ${strokeOffset}`}
           strokeDashoffset="0"
         />
       </svg>

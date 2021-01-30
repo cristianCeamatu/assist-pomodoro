@@ -40,6 +40,10 @@ export const DisplayContainer = styled.div`
     transform: translate(-50%);
     width: 100%;
     height: 100%;
+
+    circle:first-child {
+      stroke: '#FCFCFC';
+    }
   }
 
   h1 {
