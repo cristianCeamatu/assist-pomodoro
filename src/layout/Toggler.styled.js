@@ -55,6 +55,8 @@ export const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 992px) {
+    padding: 32px 56px;
+
     p {
       font-size: 24px;
       line-height: 34px;
