@@ -1,7 +1,12 @@
-import React from 'react';
+import { useSelector } from 'react-redux';
+// State
+import { selectTimeleft } from '../../features/pomodoro/pomodoroSlice';
 
 const Display = () => {
-  return <div>Clock display here</div>;
+  // State
+  const timeLeft = useSelector(selectTimeleft);
+
+  return <div>{timeLeft}</div>;
 };
 
 export default Display;
