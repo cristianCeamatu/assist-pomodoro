@@ -1,15 +1,13 @@
 # This is a Pomodoro clock web app built in few hours
 
 ![screenshot]()
-
-- I build this project as a requirement to pass the TheOdinProject modules.
 - The web app is mobile responsive.
 
 ## Built With
 
-- HTML,
-- CSS,
-- JS
+- React.js
+- Redux toolkit
+- Styled components
 
 ## Live Demo
 
