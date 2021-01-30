@@ -5,3 +5,7 @@ export const intToMMSS = (integer) => {
   seconds = seconds < 10 ? '0' + seconds.toString() : seconds;
   return `${minutes}:${seconds}`;
 };
+
+export const intToPaddedString = (integer) => {
+  return integer.toString().padStart(2, 0);
+};

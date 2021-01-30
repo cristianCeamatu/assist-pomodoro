@@ -38,18 +38,17 @@ const Actions = () => {
   };
 
   return (
-    <>
-      <div>
-        <button type="button" onClick={() => handleStartStop(active)}>
-          {active ? 'Stop' : 'Start'}
-        </button>
+    <section>
+      <button type="button" onClick={() => handleStartStop(active)}>
+        {active ? 'Stop' : 'Start'}
+      </button>
 
-        <button type="button" onClick={() => dispatch(reset())}>
-          Reset
-        </button>
-      </div>
+      <button type="button" onClick={() => dispatch(reset())}>
+        Reset
+      </button>
+
       <audio src={alarm} id="alarm" preload="auto" />
-    </>
+    </section>
   );
 };
 

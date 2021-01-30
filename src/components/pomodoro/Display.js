@@ -6,11 +6,7 @@ const Display = () => {
   // State
   const timeLeft = useSelector(selectTimeleft);
 
-  return (
-    <div>
-      <section>{timeLeft}</section>
-    </div>
-  );
+  return <h1>{timeLeft}</h1>;
 };
 
 export default Display;

@@ -6,6 +6,8 @@ import {
   decrementBreak,
   decrementSession,
 } from '../../features/pomodoro/pomodoroSlice';
+// Utils
+import { intToPaddedString } from '../../utils/format';
 
 const Settings = () => {
   // State
@@ -15,35 +17,37 @@ const Settings = () => {
 
   return (
     <section>
-      <article>
-        <button type="button" onClick={() => dispatch(decrementBreak())}>
-          Left
-        </button>
-
+      <div>
+        <h3>Break length</h3>
         <div>
-          <h3>Break</h3>
-          <p>{breakLength}</p>
+          <button type="button" onClick={() => dispatch(decrementBreak())}>
+            -
+          </button>
+
+          <div>
+            <p>{intToPaddedString(breakLength)}:00</p>
+          </div>
+
+          <button type="button" onClick={() => dispatch(incrementBreak())}>
+            +
+          </button>
         </div>
+      </div>
 
-        <button type="button" onClick={() => dispatch(incrementBreak())}>
-          Right
-        </button>
-      </article>
-
-      <article>
+      <div>
         <button type="button" onClick={() => dispatch(decrementSession())}>
           Left
         </button>
 
         <div>
           <h3>Session</h3>
-          <p>{sessionLength}</p>
+          <p>{intToPaddedString(sessionLength)}:00</p>
         </div>
 
         <button type="button" onClick={() => dispatch(incrementSession())}>
           Right
         </button>
-      </article>
+      </div>
     </section>
   );
 };
