@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   margin: 0 auto 56px;
   max-width: 335px;
-  padding-bottom: 100px;
   border: 0.5px solid #828282;
   box-sizing: border-box;
   border-radius: 10px;
@@ -39,6 +38,7 @@ export const Wrapper = styled.div`
         font-size: 20px;
         line-height: 30px;
         margin-bottom: 8px;
+        color: ${(props) => (props.theme.mode === 'light' ? '' : '#f2f2f2')};
       }
 
       p,
@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
         font-size: 16px;
         line-height: 18px;
         color: ${(props) =>
-          props.theme.mode === 'light' ? '#4f4f4f' : '#bdbdbd'};
+          props.theme.mode === 'light' ? '#4f4f4f' : '#E0E0E0'};
       }
 
       li {
@@ -68,7 +68,7 @@ export const Wrapper = styled.div`
   @media screen and (min-width: 992px) {
     border: 0;
     gap: 30px;
-    margin: 8px auto 100px;
+    margin: 8px auto;
     max-width: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr;

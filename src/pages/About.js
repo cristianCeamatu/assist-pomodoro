@@ -1,12 +1,12 @@
 import ContactDetails from '../components/ContactDetails';
-import { Title } from './About.styled.js';
+import { Wrapper } from './About.styled.js';
 
 const About = () => {
   return (
-    <section>
-      <Title>About App</Title>
+    <Wrapper>
+      <h1>About App</h1>
       <ContactDetails />
-    </section>
+    </Wrapper>
   );
 };
 
