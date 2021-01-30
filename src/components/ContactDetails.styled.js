@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   border: 0.5px solid #828282;
   box-sizing: border-box;
   border-radius: 10px;
-  background: ${({ theme }) => theme.themes[theme.mode]};
+  background: ${({ theme }) => theme.themes[theme.mode].contactDetailsBg};
 
   article {
     padding: 24px 10px;
