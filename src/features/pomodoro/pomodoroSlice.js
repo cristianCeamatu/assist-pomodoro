@@ -8,6 +8,7 @@ const initialState = {
   active: false,
   timer: false,
   timeLeft: 1500,
+  progress: 0,
   timeLeftType: 'Session',
 };
 
@@ -34,6 +35,9 @@ export const pomodoroSlice = createSlice({
       if (state.sessionLength > 1) state.sessionLength -= 1;
       if (state.timeLeftType === 'Session')
         state.timeLeft = state.sessionLength * 60;
+    },
+    increaseProgress: (state) => {
+      state.progress += 0.5;
     },
     reset: (state) => {
       state.timer && clearInterval(state.timer);
@@ -77,6 +81,7 @@ export const {
   decrementBreak,
   incrementSession,
   decrementSession,
+  increaseProgress,
   startStop,
   tick,
   reset,

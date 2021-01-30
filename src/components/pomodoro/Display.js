@@ -1,24 +1,28 @@
-import { useSelector } from 'react-redux';
-import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 // Styles/Assets
 import { DisplayContainer } from './Pomodoro.styled';
 // State
-import { selectTimeleft } from '../../features/pomodoro/pomodoroSlice';
+import {
+  selectTimeleft,
+  increaseProgress,
+} from '../../features/pomodoro/pomodoroSlice';
 
 const Display = () => {
   // State
+  const dispatch = useDispatch();
   const timeLeft = useSelector(selectTimeleft);
   const sessionLength = useSelector((state) => state.pomodoro.sessionLength);
   const breakLength = useSelector((state) => state.pomodoro.breakLength);
   const timeLeftType = useSelector((state) => state.pomodoro.timeLeftType);
-  const [strokeOffset, setStrokeOffset] = useState(0);
+  const progress = useSelector((state) => state.pomodoro.progress);
   // Actions/Effects
   useEffect(() => {
     const totalTimePerTurn =
       timeLeftType === 'Session' ? sessionLength * 60 : breakLength * 60;
     if (totalTimePerTurn % (totalTimePerTurn / 100) === 0)
-      setStrokeOffset((prevState) => (prevState += 0.5));
-  }, [timeLeft, breakLength, sessionLength, timeLeftType]);
+      dispatch(increaseProgress());
+  }, [timeLeft, breakLength, sessionLength, timeLeftType, dispatch]);
 
   return (
     <DisplayContainer>
@@ -42,7 +46,7 @@ const Display = () => {
           fill="none"
           strokeWidth="2"
           strokeLinecap="round"
-          strokeDasharray={`194, ${strokeOffset}`}
+          strokeDasharray={`194, ${progress}`}
           strokeDashoffset="0"
         />
       </svg>
