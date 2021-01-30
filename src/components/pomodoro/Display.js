@@ -13,6 +13,7 @@ const Display = () => {
   const dispatch = useDispatch();
   const timeLeft = useSelector(selectTimeleft);
   const sessionLength = useSelector((state) => state.pomodoro.sessionLength);
+  const active = useSelector((state) => state.pomodoro.active);
   const breakLength = useSelector((state) => state.pomodoro.breakLength);
   const timeLeftType = useSelector((state) => state.pomodoro.timeLeftType);
   const progress = useSelector((state) => state.pomodoro.progress);
@@ -20,12 +21,8 @@ const Display = () => {
   useEffect(() => {
     const totalTimePerTurn =
       timeLeftType === 'Session' ? sessionLength * 60 : breakLength * 60;
-    if (
-      totalTimePerTurn % (totalTimePerTurn / 100) === 0 &&
-      totalTimePerTurn !== timeLeft
-    )
-      dispatch(increaseProgress());
-  }, [timeLeft, breakLength, sessionLength, timeLeftType, dispatch]);
+    if (totalTimePerTurn % 5 === 0 && active) dispatch(increaseProgress());
+  }, [timeLeft, breakLength, sessionLength, timeLeftType, active, dispatch]);
 
   return (
     <DisplayContainer>

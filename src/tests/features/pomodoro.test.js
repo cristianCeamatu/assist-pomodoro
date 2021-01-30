@@ -67,9 +67,9 @@ describe('decrementSession', () => {
 });
 
 describe('increaseProgress', () => {
-  test('increments the progress by 0.5', () => {
+  test('increments the progress by 0.25', () => {
     let { progress } = store.getState().pomodoro;
-    progress += 0.5;
+    progress += 0.25;
     store.dispatch(increaseProgress());
     expect(progress).toStrictEqual(store.getState().pomodoro.progress);
   });

@@ -17,27 +17,27 @@ export const pomodoroSlice = createSlice({
   initialState,
   reducers: {
     incrementBreak: (state) => {
-      if (state.breakLength < 60) state.breakLength += 1;
+      if (state.breakLength < 60 && !state.active) state.breakLength += 1;
       if (state.timeLeftType === 'Break')
         state.timeLeft = state.breakLength * 60;
     },
     decrementBreak: (state) => {
-      if (state.breakLength > 1) state.breakLength -= 1;
+      if (state.breakLength > 1 && !state.active) state.breakLength -= 1;
       if (state.timeLeftType === 'Break')
         state.timeLeft = state.breakLength * 60;
     },
     incrementSession: (state) => {
-      if (state.sessionLength < 120) state.sessionLength += 1;
+      if (state.sessionLength < 120 && !state.active) state.sessionLength += 1;
       if (state.timeLeftType === 'Session')
         state.timeLeft = state.sessionLength * 60;
     },
     decrementSession: (state) => {
-      if (state.sessionLength > 1) state.sessionLength -= 1;
+      if (state.sessionLength > 1 && !state.active) state.sessionLength -= 1;
       if (state.timeLeftType === 'Session')
         state.timeLeft = state.sessionLength * 60;
     },
     increaseProgress: (state) => {
-      state.progress += 0.5;
+      state.progress += 0.25;
     },
     reset: (state) => {
       state.timer && clearInterval(state.timer);
