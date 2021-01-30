@@ -18,6 +18,7 @@ const initialState = {
       aboutHeading: '',
       aboutTitle: '',
       aboutSubtitle: '#4f4f4f',
+      contactDetailsBg: '#fcfcfc',
       displayBg: '#fcfcfc',
       settingsTitle: '#4F4F4F',
       gradiendButtonBg:
