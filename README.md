@@ -1,4 +1,4 @@
-# This is a Pomodoro clock web app built in 8 hours
+# This is a Pomodoro clock web app built in 1 day
 - The web app is mobile responsive.
 
 ## Built With
