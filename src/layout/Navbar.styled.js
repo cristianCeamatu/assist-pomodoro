@@ -33,7 +33,6 @@ export const Nav = styled.nav`
     font-size: 12px;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: #ffffff;
     padding: 6px 11px 6px 12px;
   }
 `;

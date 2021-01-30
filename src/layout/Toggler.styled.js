@@ -12,10 +12,14 @@ export const Wrapper = styled.div`
   gap: 8px;
 
   p {
-    color: #bdbdbd;
+    &:first-child {
+      color: ${(props) =>
+        props.theme.mode === 'light' ? '#4F4F4F' : '#828282'};
+    }
 
-    &.active {
-      color: #4f4f4f;
+    &:last-child {
+      color: ${(props) =>
+        props.theme.mode === 'light' ? '#BDBDBD' : '#F2F2F2'};
     }
   }
 
