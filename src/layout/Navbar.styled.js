@@ -42,4 +42,16 @@ export const Nav = styled.nav`
     text-transform: uppercase;
     padding: 6px 11px 6px 12px;
   }
+
+  @media screen and (min-width: 992px) {
+    .nav-brand {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    ul li a {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
 `;
