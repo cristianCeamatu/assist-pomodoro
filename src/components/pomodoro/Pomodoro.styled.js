@@ -9,26 +9,44 @@ export const H3 = styled.h3`
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 40px;
     line-height: 50px;
   }
 `;
 
 export const DisplayContainer = styled.div`
-  display: flex;
-  width: 297px;
-  height: 297px;
+  width: 257px;
+  height: 257px;
   margin: 0 auto 24px;
-  border-radius: 100%;
-  align-items: center;
-  justify-content: center;
   font-size: 54px;
   line-height: 64px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: ${(props) =>
     props.theme.mode === 'light' ? '#FCFCFC' : '#252836'};
+  position: relative;
+  width: 297px;
+  height: 297px;
+  border-radius: 100%;
+
+  svg {
+    width: 297px;
+    height: 297px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 54px;
+    line-height: 64px;
+  }
+
   @media screen and (min-width: 992px) {
     grid-column: 1 / span 1;
     grid-row: 1 / span 3;

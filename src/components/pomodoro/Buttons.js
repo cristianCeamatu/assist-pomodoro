@@ -33,7 +33,7 @@ const Actions = () => {
       timer && clearInterval(timer);
       dispatch(startStop(null));
     } else {
-      const newTimer = setInterval(() => dispatch(tick()), 1);
+      const newTimer = setInterval(() => dispatch(tick()), 1000);
       dispatch(startStop(newTimer));
     }
   };
