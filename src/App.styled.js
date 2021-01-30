@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   letter-spacing: 0.01em;
   text-align: center;
 
-  .grid {
+  main {
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
