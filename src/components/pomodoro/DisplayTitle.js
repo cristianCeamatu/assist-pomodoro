@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 // Styles/Assets
-import { H3 } from './Pomodoror.styled';
+import { H3 } from './Pomodoro.styled';
 
 const DisplayTitle = () => {
   // State

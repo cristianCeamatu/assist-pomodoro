@@ -19,7 +19,7 @@ const Toggler = () => {
           className="checkbox"
           onChange={() => dispatch(toggleTheme())}
         />
-        <label for="autoplay" className="switch" />
+        <label htmlFor="autoplay" className="switch" />
       </form>
       <p>Dark</p>
     </Wrapper>
