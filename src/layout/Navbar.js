@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+// Styles/Assets
+import { Nav } from './Navbar.styled';
 
 const Navbar = () => {
   return (
-    <nav>
-      <div>
+    <Nav>
+      <div className="nav-brand">
         <Link to="/">Pomotime</Link>
       </div>
 
@@ -12,7 +14,7 @@ const Navbar = () => {
           <Link to="/about">About</Link>
         </li>
       </ul>
-    </nav>
+    </Nav>
   );
 };
 
