@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  margin: 0 20px;
-  background: #fcfcfc;
+  margin: 0 20px 56px;
   border: 0.5px solid #828282;
   box-sizing: border-box;
   border-radius: 10px;
+  background: ${(props) =>
+    props.theme.mode === 'light' ? '#fcfcfc' : '#252836'};
 
   article {
-    padding: 24px 10px;
+    padding: 24px 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,8 +25,8 @@ export const Wrapper = styled.div`
       text-align: right;
       align-self: start;
       padding-right: 11px;
-      font-size: 18px;
-      line-height: 32px;
+      font-size: 22px;
+      line-height: 36px;
     }
 
     .details {
@@ -35,24 +36,29 @@ export const Wrapper = styled.div`
       h3 {
         font-size: 20px;
         line-height: 30px;
+        margin-bottom: 8px;
       }
 
       p,
       li {
         font-size: 16px;
         line-height: 18px;
-        color: #4f4f4f;
+        color: ${(props) =>
+          props.theme.mode === 'light' ? '#4f4f4f' : '#bdbdbd'};
       }
 
-      li:before {
-        content: '';
-        width: 8px;
-        height: 8px;
-        background: #c4c4c4;
-        display: inline-block;
-        border-radius: 100%;
-        margin-right: 8px;
-        margin-bottom: 2px;
+      li {
+        margin-bottom: 8px;
+        &:before {
+          content: '';
+          width: 8px;
+          height: 8px;
+          background: #c4c4c4;
+          display: inline-block;
+          border-radius: 100%;
+          margin-right: 8px;
+          margin-bottom: 2px;
+        }
       }
     }
   }
