@@ -20,7 +20,10 @@ const Display = () => {
   useEffect(() => {
     const totalTimePerTurn =
       timeLeftType === 'Session' ? sessionLength * 60 : breakLength * 60;
-    if (totalTimePerTurn % (totalTimePerTurn / 100) === 0)
+    if (
+      totalTimePerTurn % (totalTimePerTurn / 100) === 0 &&
+      totalTimePerTurn !== timeLeft
+    )
       dispatch(increaseProgress());
   }, [timeLeft, breakLength, sessionLength, timeLeftType, dispatch]);
 

@@ -1,6 +1,4 @@
 # This is a Pomodoro clock web app built in 8 hours
-
-![screenshot]()
 - The web app is mobile responsive.
 
 ## Built With
@@ -9,21 +7,19 @@
 - Redux toolkit
 - Styled components
 
-## Live Demo
-
-[Live Demo Link](https://cristianceamatu.github.io/assist-pomodoro/)
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
 Clone the project locally.
 
-### Deployment
+### Getting started
 
 Navigate to the root folder, run `yarn install` and wait for the install to finish,then run `yarn start` from the root folder. Note: you will need to have `yarn` installed on your PC, you can also install `npm` and run the commands `npm install` and `npm start`
 
+## Tests
+
+Run `yarn test` from the root folder and when prompted press `a` to run all tests.
 
 ## Authors
 
@@ -37,7 +33,6 @@ Navigate to the root folder, run `yarn install` and wait for the install to fini
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
 
 ## 📝 License
 
