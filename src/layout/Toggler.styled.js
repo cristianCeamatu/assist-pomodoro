@@ -55,7 +55,23 @@ export const Wrapper = styled.div`
   }
 
   @media screen and (min-width: 992px) {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 1;
+    p {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    .switch {
+      width: 40px;
+      height: 28px;
+
+      &:after {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    #autoplay.checkbox:checked + .switch:after {
+      left: 15px;
+    }
   }
 `;

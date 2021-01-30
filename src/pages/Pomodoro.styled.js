@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const GridSection = styled.section`
-  display: grid;
-  grid-template-columns: 1fr, 1fr;
-  /* grid-template-rows: repeat(4, 1fr); */
-  grid-auto-rows: minmax(min-content, max-content);
+  @media screen and (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    align-items: stretch;
+    padding-bottom: 102px;
+  }
 `;

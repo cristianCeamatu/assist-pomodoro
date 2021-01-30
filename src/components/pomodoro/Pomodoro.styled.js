@@ -7,7 +7,13 @@ export const H3 = styled.h3`
 
   @media screen and (min-width: 992px) {
     grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
+    grid-row: 1 / span 1;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    line-height: 50px;
   }
 `;
 
@@ -25,7 +31,12 @@ export const DisplayContainer = styled.div`
     props.theme.mode === 'light' ? '#FCFCFC' : '#252836'};
   @media screen and (min-width: 992px) {
     grid-column: 1 / span 1;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 3;
+    width: 539px;
+    height: 539px;
+    font-size: 88px;
+    line-height: 98px;
+    margin-bottom: 0;
   }
 `;
 
@@ -70,7 +81,23 @@ export const SettingsContainer = styled.div`
 
   @media screen and (min-width: 992px) {
     grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
+    grid-row: 2 / span 1;
+
+    h3 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+
+    ul {
+      font-size: 26px;
+      line-height: 28px;
+      padding: 12px;
+
+      button {
+        font-size: 26px;
+        line-height: 28px;
+      }
+    }
   }
 `;
 
@@ -121,6 +148,13 @@ export const ButtonsContainer = styled.div`
 
   @media screen and (min-width: 992px) {
     grid-column: 2 / span 1;
-    grid-row: 4 / span 1;
+    grid-row: 3 / span 1;
+
+    button {
+      width: 496px;
+      height: 82px;
+      font-size: 28px;
+      line-height: 30px;
+    }
   }
 `;
