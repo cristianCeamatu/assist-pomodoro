@@ -1,4 +1,4 @@
-# This is a Pomodoro clock web app built in few hours
+# This is a Pomodoro clock web app built in 8 hours
 
 ![screenshot]()
 - The web app is mobile responsive.
@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://cristianceamatu.github.io/theOdinProject-pomodoro-clock/)
+[Live Demo Link](https://cristianceamatu.github.io/assist-pomodoro/)
 
 
 To get a local copy up and running follow these simple example steps.
@@ -22,7 +22,7 @@ Clone the project locally.
 
 ### Deployment
 
-Install and run a live server plugin on you IDE/Text editor and run it from the root directory.
+Navigate to the root folder, run `yarn install` and wait for the install to finish,then run `yarn start` from the root folder. Note: you will need to have `yarn` installed on your PC, you can also install `npm` and run the commands `npm install` and `npm start`
 
 
 ## Authors
@@ -30,8 +30,8 @@ Install and run a live server plugin on you IDE/Text editor and run it from the 
 👤 **Cristian Viorel Ceamatu**
 
 - Github: [@githubhandle](https://github.com/cristianCeamatu)
-- Twitter: [@twitterhandle](https://twitter.com/CeamatuV)
-- Linkedin: [linkedin](https://www.linkedin.com/in/ceamatu-cristian-viorel-7a5469136/)
+- Twitter: [@twitterhandle](https://twitter.com/CristianCeamatu)
+- Linkedin: [linkedin](https://www.linkedin.com/in/ceamatu-cristian/)
 
 
 ## Show your support
