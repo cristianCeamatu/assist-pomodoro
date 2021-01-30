@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // Styles/Assets
 import alarm from '../../assets/alarm.mp3';
+import { ButtonsContainer } from './Pomodoro.styled';
 // State
 import {
   selectTimeleft,
@@ -38,17 +39,25 @@ const Actions = () => {
   };
 
   return (
-    <section>
-      <button type="button" onClick={() => handleStartStop(active)}>
-        {active ? 'Stop' : 'Start'}
+    <ButtonsContainer>
+      <button
+        className="gradient"
+        type="button"
+        onClick={() => handleStartStop(active)}
+      >
+        {active ? 'Pause' : 'Start'}
       </button>
 
-      <button type="button" onClick={() => dispatch(reset())}>
+      <button
+        className="default"
+        type="button"
+        onClick={() => dispatch(reset())}
+      >
         Reset
       </button>
 
       <audio src={alarm} id="alarm" preload="auto" />
-    </section>
+    </ButtonsContainer>
   );
 };
 

@@ -59,3 +59,49 @@ export const SettingsContainer = styled.div`
     }
   }
 `;
+
+export const ButtonsContainer = styled.div`
+  padding: 40px 20px 34px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+
+  button {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.015em;
+    border-radius: 8px;
+    width: 335px;
+    height: 62px;
+
+    &.gradient {
+      background: ${(props) =>
+        props.theme.mode === 'light'
+          ? 'linear-gradient(91.84deg, #2F80ED 0.5%, rgba(238, 58, 220, 0.6) 89.88%)'
+          : 'linear-gradient(91.84deg, #11BCC7 0.5%, rgba(238, 58, 220, 0.6) 89.88%)'};
+      box-shadow: ${(props) =>
+        props.theme.mode === 'light'
+          ? '0px 4px 24px rgba(93, 11, 131, 0.25)'
+          : '0px 4px 40px rgba(93, 11, 131, 0.25)'};
+    }
+
+    &.default {
+      background: ${(props) =>
+        props.theme.mode === 'light' ? '#FCFCFC' : '#252836'};
+      border: ${(props) =>
+        props.theme.mode === 'light'
+          ? '2px solid #828282'
+          : '2px solid #E0E0E0'};
+      filter: ${(props) =>
+        props.theme.mode === 'light'
+          ? 'drop-shadow(0px 4px 24px rgba(47, 128, 237, 0.25))'
+          : ''};
+      color: ${(props) =>
+        props.theme.mode === 'light' ? '#828282' : '#F2F2F2'};
+    }
+  }
+`;
