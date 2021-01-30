@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const H3 = styled.h3`
+export const Title = styled.h3`
   font-size: 24px;
   line-height: 26px;
   margin-bottom: 24px;
@@ -139,6 +139,7 @@ export const ButtonsContainer = styled.div`
     border-radius: 8px;
     width: 335px;
     height: 62px;
+    max-width: 100%;
 
     &.gradient {
       background: ${({ theme }) => theme.themes[theme.mode].gradiendButtonBg};
@@ -159,10 +160,18 @@ export const ButtonsContainer = styled.div`
     grid-row: 3 / span 1;
 
     button {
-      width: 496px;
+      width: 436px;
       height: 82px;
       font-size: 28px;
       line-height: 30px;
+      max-width: 100%;
+      border: 5px solid red;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    button {
+      width: 476px;
     }
   }
 `;

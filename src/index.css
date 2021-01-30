@@ -25,6 +25,7 @@ ul {
 button {
   background-color: inherit;
   outline: none;
+  cursor: pointer;
 }
 
 button:focus {

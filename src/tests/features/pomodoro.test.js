@@ -11,9 +11,7 @@ import {
   incrementSession,
   decrementSession,
   increaseProgress,
-  startStop,
   tick,
-  reset,
 } from '../../features/pomodoro/pomodoroSlice';
 
 afterEach(() => {

@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux';
 // Styles/Assets
-import { H3 } from './Pomodoro.styled';
+import { Title } from './Pomodoro.styled';
 
 const DisplayTitle = () => {
   // State
   const timeLeftType = useSelector((state) => state.pomodoro.timeLeftType);
 
-  return <H3>{timeLeftType}</H3>;
+  return <Title>{timeLeftType}</Title>;
 };
 
 export default DisplayTitle;
