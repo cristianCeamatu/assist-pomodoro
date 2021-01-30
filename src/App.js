@@ -1,15 +1,17 @@
 // Components
-import Pomodoro from './components/pomodoro/Pomodoro';
-// Styles
-import './App.css';
+import Content from './pages';
+import Navbar from './layout/Navbar';
+import Toggler from './layout/Toggler';
 
-function App() {
+const App = () => {
+  console.log('Content :>> ', Content);
   return (
-    <div className="App">
-      <h1>App.js</h1>
-      <Pomodoro />
+    <div>
+      <Navbar />
+      <Content />
+      <Toggler />
     </div>
   );
-}
+};
 
 export default App;

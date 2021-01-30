@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+// Styles/Assets
+import alarm from '../../assets/alarm.mp3';
 // State
 import {
   selectTimeleft,
@@ -36,15 +38,18 @@ const Actions = () => {
   };
 
   return (
-    <div>
-      <button type="button" onClick={() => handleStartStop(active)}>
-        {active ? 'Stop' : 'Start'}
-      </button>
+    <>
+      <div>
+        <button type="button" onClick={() => handleStartStop(active)}>
+          {active ? 'Stop' : 'Start'}
+        </button>
 
-      <button type="button" onClick={() => dispatch(reset())}>
-        Reset
-      </button>
-    </div>
+        <button type="button" onClick={() => dispatch(reset())}>
+          Reset
+        </button>
+      </div>
+      <audio src={alarm} id="alarm" preload="auto" />
+    </>
   );
 };
 
