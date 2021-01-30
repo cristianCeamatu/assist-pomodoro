@@ -1,43 +1,45 @@
 import { FaGithub, FaRegUser, FaCode, FaRegFile } from 'react-icons/fa';
+// Styles/Assets
+import { Wrapper } from './ContactDetails.styled';
 
 const ContactDetails = () => {
   return (
-    <div>
-      <article className="contact">
-        <p>
+    <Wrapper>
+      <article>
+        <p className="icon">
           <FaRegUser />
         </p>
-        <div>
+        <div className="details">
           <h3>Author name</h3>
           <p>John Doe</p>
         </div>
       </article>
 
-      <article className="contact">
-        <p>
+      <article>
+        <p className="icon">
           <FaGithub />
         </p>
-        <div>
+        <div className="details">
           <h3>Github</h3>
           <p>Johndoe309</p>
         </div>
       </article>
 
-      <article className="contact">
-        <p>
+      <article>
+        <p className="icon">
           <FaRegFile />
         </p>
-        <div>
-          <h3>App Description</h3>
+        <div className="details">
+          <h3>Github</h3>
           <p>Velit odio auctor malesuada nulla odio nunc amet ac tempus.</p>
         </div>
       </article>
 
-      <article className="contact">
-        <p>
+      <article>
+        <p className="icon">
           <FaCode />
         </p>
-        <div>
+        <div className="details">
           <h3>Stack</h3>
           <ul>
             <li>HTML</li>
@@ -47,7 +49,7 @@ const ContactDetails = () => {
           </ul>
         </div>
       </article>
-    </div>
+    </Wrapper>
   );
 };
 

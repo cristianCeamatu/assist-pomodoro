@@ -4,7 +4,7 @@ import { Title } from './About.styled.js';
 const About = () => {
   return (
     <section>
-      <Title>About</Title>
+      <Title>About App</Title>
       <ContactDetails />
     </section>
   );
