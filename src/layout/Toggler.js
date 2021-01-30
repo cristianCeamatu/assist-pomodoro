@@ -1,14 +1,28 @@
-import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+// Styles/Assets
+import { Wrapper } from './Toggler.styled';
+// State
+import { toggleTheme } from '../features/theme/themeSlice';
 
 const Toggler = () => {
+  // State
+  const dispatch = useDispatch();
+  const currentTheme = useSelector((state) => state.theme.mode);
+
   return (
-    <div>
-      <ul>
-        <li>Light</li>
-        <li>Toggler</li>
-        <li>Dark</li>
-      </ul>
-    </div>
+    <Wrapper>
+      <p className="active">Light</p>
+      <form action="/index.html">
+        <input
+          type="checkbox"
+          id="autoplay"
+          className="checkbox"
+          onChange={() => dispatch(toggleTheme())}
+        />
+        <label for="autoplay" className="switch" />
+      </form>
+      <p>Dark</p>
+    </Wrapper>
   );
 };
 
